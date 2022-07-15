@@ -11,8 +11,8 @@
 
 
 #include "ultramegaagrresivefpsup.hpp"
-
 #include "popit_game.hpp"
+#include "print_d3d9_vtable.hpp"
 
 void CreateConsole()
 {

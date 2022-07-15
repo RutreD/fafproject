@@ -74,29 +74,29 @@ HRESULT drawindexedprimitive_hooked(const decltype(drawindexedprimitive_hook) &h
     UINT offset;
     UINT stride;
 
-    if (SUCCEEDED(pDevice->GetStreamSource(0, &stream_data, &offset, &stride)))
-        stream_data->Release();
-    if (stride == veryaggresivefpsup.CurrentStride)
-    {
-        if (veryaggresivefpsup.applyMySettings)
+    if (SUCCEEDED(pDevice->GetStreamSource(0, &stream_data, &offset, &stride))) {
+        if (stride == veryaggresivefpsup.CurrentStride)
         {
-            BaseVertexIndex = veryaggresivefpsup.myBaseVertexIndex;
-            MinVertexIndex = veryaggresivefpsup.myMinVertexIndex;
-            NumVertices = veryaggresivefpsup.myNumVertices;
-            startIndex = veryaggresivefpsup.myStartIndex;
-            primCount = veryaggresivefpsup.myPrimCount;
+            if (veryaggresivefpsup.applyMySettings)
+            {
+                BaseVertexIndex = veryaggresivefpsup.myBaseVertexIndex;
+                MinVertexIndex = veryaggresivefpsup.myMinVertexIndex;
+                NumVertices = veryaggresivefpsup.myNumVertices;
+                startIndex = veryaggresivefpsup.myStartIndex;
+                primCount = veryaggresivefpsup.myPrimCount;
+            }
+            veryaggresivefpsup.PrimitiveType = PrimitiveType;
+            veryaggresivefpsup.BaseVertexIndex = BaseVertexIndex;
+            veryaggresivefpsup.MinVertexIndex = MinVertexIndex;
+            veryaggresivefpsup.NumVertices = NumVertices;
+            veryaggresivefpsup.StartIndex = startIndex;
+            veryaggresivefpsup.PrimCount = primCount;
+            if (veryaggresivefpsup.applyMySettings)
+                hook.get_trampoline()(pDevice, PrimitiveType, BaseVertexIndex, MinVertexIndex, NumVertices, startIndex, primCount);
+            
+            return 0;
         }
-        veryaggresivefpsup.LastWrittenStrade = stride;
-        veryaggresivefpsup.PrimitiveType = PrimitiveType;
-        veryaggresivefpsup.BaseVertexIndex = BaseVertexIndex;
-        veryaggresivefpsup.MinVertexIndex = MinVertexIndex;
-        veryaggresivefpsup.NumVertices = NumVertices;
-        veryaggresivefpsup.StartIndex = startIndex;
-        veryaggresivefpsup.PrimCount = primCount;
-        if (veryaggresivefpsup.applyMySettings)
-            return hook.get_trampoline()(pDevice, PrimitiveType, BaseVertexIndex, MinVertexIndex, NumVertices, startIndex, primCount);
-        // maybe i can optimize this indexed primitive, but i am noob and just block it for fps xD
-        return 0; // i dont wanna render this, ok game
+        stream_data->Release();
     }
     return hook.get_trampoline()(pDevice, PrimitiveType, BaseVertexIndex, MinVertexIndex, NumVertices, startIndex, primCount);
 }
