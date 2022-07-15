@@ -8,7 +8,8 @@ Full access to the DirectD3D9 device, you can modify the texture (recolor for ex
 # How to test
 
 * Install an ASI-Loader. For example: https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/Win32-latest/d3d9.zip , put to C:\ProgramData\FAForever\bin
-* Download project.asi from release or build it yourself and put to C:\ProgramData\FAForever\bin or C:\ProgramData\FAForever\bin\plugins
+* Download project.asi from release or build it yourself
+* Put to C:\ProgramData\FAForever\bin or C:\ProgramData\FAForever\bin\plugins
 
 # Building
 
