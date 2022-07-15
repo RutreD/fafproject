@@ -1,0 +1,6 @@
+[submodule "imgui"]
+	path = imgui
+	url = https://github.com/ocornut/imgui
+[submodule "kthook"]
+	path = kthook
+	url = https://github.com/kin4stat/kthook
