@@ -1,6 +1,8 @@
 [submodule "imgui"]
 	path = imgui
 	url = https://github.com/ocornut/imgui
+	shallow = true
 [submodule "kthook"]
 	path = kthook
 	url = https://github.com/kin4stat/kthook
+	shallow = true
