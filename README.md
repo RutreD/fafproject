@@ -2,7 +2,7 @@
 # fafproject
 
 Now it's just a toy and a little demonstration of what it can do.
-In addition to ImGui, it can hook any function of the game runtime, you only need the address and the prototype. 
+In addition to ImGui, it can hook any function of the game in runtime, need the address and the prototype. 
 Full access to the DirectD3D9 device, you can modify the texture (recolor for example), prevent it from rendering or add something to it(look at ultramegaagrresivefpsup.hpp for example).
 
 # How to test
