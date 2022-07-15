@@ -13,7 +13,7 @@ Full access to the DirectD3D9 device, you can modify the texture (recolor for ex
 # Building
 
 * clone 
-  * `git clone --recursive ...`
+  * `git clone --recursive https://github.com/RutreD/fafproject.git`
 * compile
   * need visual studio compiler with support C++17 and cmake
   * open folder in visual studio or visual studio code
