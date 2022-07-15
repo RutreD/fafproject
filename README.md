@@ -1,3 +1,4 @@
+[![Windows](https://github.com/RutreD/fafproject/actions/workflows/windows-build.yml/badge.svg)](https://github.com/RutreD/fafproject/actions/workflows/windows-build.yml)
 # fafproject
 
 Now it's just a toy and a little demonstration of what it can do.
