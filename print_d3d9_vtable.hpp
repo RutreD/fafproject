@@ -8,7 +8,8 @@ struct D3D9Vtable
         ImGui::Hook::OnInitialize += []() {
             auto vtbl = ImGui::Hook::D3D9::GetVirtualTable();
             std::cout << std::hex;
-            std::cout << "D3D9 functions:" << std::endl;
+            std::cout << "D3D9Device functions:" << std::endl;
+            std::cout << "D3D9Device pointer:" << " 0x" << ImGui::Hook::D3D9::Device << std::endl;
             std::cout << "QueryInterface" << " 0x" << vtbl[0] << std::endl;
             std::cout << "AddRef" << " 0x" << vtbl[1] << std::endl;
             std::cout << "Release" << " 0x" << vtbl[2] << std::endl;
