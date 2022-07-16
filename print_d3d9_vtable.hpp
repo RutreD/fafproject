@@ -133,5 +133,5 @@ struct D3D9Vtable
         };
     }
     ~D3D9Vtable() {}
-} D3D9Vtbl;
+} /* D3D9Vtbl */;
 }

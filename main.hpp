@@ -13,6 +13,7 @@
 #include "ultramegaagrresivefpsup.hpp"
 #include "popit_game.hpp"
 #include "print_d3d9_vtable.hpp"
+#include "patch_height_cylinders.hpp"
 
 void CreateConsole()
 {

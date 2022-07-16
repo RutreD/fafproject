@@ -40,6 +40,9 @@ target_sources(imgui PRIVATE
 )
 #ImGui
 
+#include_directories("$ENV{DXSDK_DIR}/Include")
+#link_directories("$ENV{DXSDK_DIR}/Lib/x86")
+
 add_library(${PROJECT_NAME} SHARED "main.cpp")
 
 set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".asi")

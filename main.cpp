@@ -6,8 +6,8 @@ class Plugin
     
     ImGui::Hook::D3D9 d3d9hook{};
 
-    bool demo{true};
-    bool menu{true};
+    bool demo{false};
+    bool menu{false};
 
     PopitGame popit{30 /*radius*/, 7 /*amount*/};
 

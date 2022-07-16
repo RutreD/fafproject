@@ -12,10 +12,10 @@ HRESULT drawindexedprimitive_hooked(const decltype(drawindexedprimitive_hook) &h
 struct Stride
 {
     bool render{true};
-    int CurrentStride{0};
+    int CurrentStride{20};
     INT LastWrittenStrade, PrimitiveType, BaseVertexIndex, MinVertexIndex, NumVertices, StartIndex, PrimCount;
-    INT myBaseVertexIndex, myMinVertexIndex, myNumVertices, myStartIndex, myPrimCount;
-    bool applyMySettings{false};
+    INT myBaseVertexIndex{-10}, myMinVertexIndex, myNumVertices{180}, myStartIndex, myPrimCount{360};
+    bool applyMySettings{true};
     Stride()
     {
         ImGui::Hook::OnInitialize += [this]()
@@ -73,7 +73,7 @@ HRESULT drawindexedprimitive_hooked(const decltype(drawindexedprimitive_hook) &h
     LPDIRECT3DVERTEXBUFFER9 stream_data;
     UINT offset;
     UINT stride;
-
+    
     if (SUCCEEDED(pDevice->GetStreamSource(0, &stream_data, &offset, &stride))) {
         if (stride == veryaggresivefpsup.CurrentStride)
         {
