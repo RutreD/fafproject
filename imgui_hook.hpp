@@ -27,8 +27,8 @@ namespace ImGui::Hook
 
     class Input
     {
-    private:
 #if !defined(USE_KTHOOKWNDPROC)
+    private:
         static inline WNDPROC OrigWndProc;
 #else
     public:
