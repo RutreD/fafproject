@@ -47,7 +47,7 @@ struct Stride
         };
         ImGui::Hook::OnWndProc += [this](auto, auto msg, auto wparam, auto)
         {
-            if (msg == WM_KEYDOWN)
+            if (msg == WM_KEYDOWN && !ImGui::GetIO().WantCaptureKeyboard)
             {
                 if (wparam == VK_RIGHT)
                 {
