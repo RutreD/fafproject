@@ -14,6 +14,7 @@
 #include "popit_game.hpp"
 #include "print_d3d9_vtable.hpp"
 #include "patch_height_cylinders.hpp"
+#include "something_ID3DXEffect.hpp"
 
 void CreateConsole()
 {
