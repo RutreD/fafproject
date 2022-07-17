@@ -11,11 +11,11 @@ HRESULT drawindexedprimitive_hooked(const decltype(drawindexedprimitive_hook) &h
 
 struct Stride
 {
-    bool render{true};
-    int CurrentStride{20};
+    bool render{false};
+    int CurrentStride{0};
     INT LastWrittenStrade, PrimitiveType, BaseVertexIndex, MinVertexIndex, NumVertices, StartIndex, PrimCount;
-    INT myBaseVertexIndex{-10}, myMinVertexIndex, myNumVertices{180}, myStartIndex, myPrimCount{360};
-    bool applyMySettings{true};
+    INT myBaseVertexIndex, myMinVertexIndex, myNumVertices, myStartIndex, myPrimCount;
+    bool applyMySettings{false};
     Stride()
     {
         ImGui::Hook::OnInitialize += [this]()

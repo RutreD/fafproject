@@ -47,4 +47,4 @@ add_library(${PROJECT_NAME} SHARED "main.cpp")
 
 set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".asi")
 
-target_link_libraries(${PROJECT_NAME} PUBLIC kthook imgui)
+target_link_libraries(${PROJECT_NAME} PRIVATE kthook imgui)
